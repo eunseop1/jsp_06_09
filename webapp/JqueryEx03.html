@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){// window.onload와 같은 기능이다
+		$("h1").css('color','red');
+		$("h1").eq(1).css('color','green');
+		//첫번째는 0으로 시작하니까 두번째것의 색을 녹색으로 바꾼다
+		$("h1").first().css('color','blue');
+		$("h1").last().css('color','pink');
+	});
+
+</script>
+
+</head>
+<body>
+	<h1>Hello JQuery!!!</h1>
+	<h1>Hello JQuery!!!</h1>
+	<h1>Hello JQuery!!!</h1>
+	<h1>Hello JQuery!!!</h1>
+	<h1>Hello JQuery!!!</h1>
+</body>
+</html>

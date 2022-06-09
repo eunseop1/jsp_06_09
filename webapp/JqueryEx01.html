@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+	window.onload = function(){
+		alert('기존 자바스크립트!!!')
+	}
+	window.onload = function(){
+		alert('기존 자바스크립트!!! 2')
+	}
+	window.onload = function(){
+		alert('기존 자바스크립트!!! 3')
+	}
+	//같은게 기존의 같은 것을 재정의하기에 기존 자바스크립트3만 나온다
+	
+	$( document ).ready(function() {
+	    console.log( "jquery 1" );
+	});//완성형
+	
+	$(function(){//축약형
+		alert("Jquery 2");
+	});
+	$(function(){
+		alert("Jquery 3");
+	});
+	$(function(){
+		alert("Jquery 4");
+	});
+	//여기는 모두 각각 따로 나온다
+	
+	//모두 같은 의미(시작하자 마자 바로 작동된다)
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

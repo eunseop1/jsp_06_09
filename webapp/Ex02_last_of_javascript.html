@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 연습</title>
+
+<script type="text/javascript">
+//이벤트 전달
+	window.onload = function(){
+		document.getElementById("p").onclick = function(e){
+			var event = e || window.event;
+			alert('나는 문단입니다.');
+			
+			event.cancelBubble = true;
+			if(event.stopPropagation){//해당 브라우저가 stopPropagation를 지원하는가?
+				event.stopPropagation();//지원하면 stopPropagation를 사용한다
+			}
+			
+		}
+		document.getElementById("h1").onclick = function(e){
+			var event = e || window.event;
+			alert('나는 제목입니다.');
+			
+			event.cancelBubble = true;
+			if(event.stopPropagation){
+				event.stopPropagation();
+			}
+		}
+	}
+</script>
+<style type="text/css">
+	div, h1, p {border: 3px solid gray; padding: 20px;}
+</style>
+
+</head>
+<body>
+	
+	<!-- div>div>h1>p{나는 문단입니다.} -->
+	<div id="outerDiv">
+		<div id="innerDiv">
+			<h1 id="h1">
+				<p id="p">나는 문단입니다.</p>
+			</h1>
+		</div>
+	</div>
+	
+</body>
+</html>
